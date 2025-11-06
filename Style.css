@@ -1,0 +1,300 @@
+/* ======= Fonts ======= */
+@font-face {
+  font-family: 'Zirkel';
+  src: url('fonts/Zirkel.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ZirkelExtraLight';
+  src: url('fonts/ZirkelExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ======= Reset & Base ======= */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #eee;
+}
+
+/* ======= Background Layers ======= */
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+/* background image assignments */
+#bg1 { background-image: url('Images/bg1.jpg'); }
+#bg2 { background-image: url('Images/bg2.jpg'); }
+#bg3 { background-image: url('Images/bg3.jpg'); }
+#bg4 { background-image: url('Images/bg4.jpg'); }
+#bg5 { background-image: url('images/bg5.jpg'); }
+
+/* ======= Page-level themes ======= */
+body.contact-page,
+body.Port-page,
+body.Service-page {
+  background-color: #1a1a1a;
+}
+
+/* ======= Layout: header / main ======= */
+header,
+main {
+  position: relative;
+  top: 32px;
+  left: 50px;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+  padding-bottom: 2rem 0;
+}
+
+/* ======= Branding / Logo ======= */
+.Bram-Text {
+  font-family: 'Zirkel', sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.Bram-Text a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  transition: transform 0.2s ease, text-decoration 0.2s ease;
+}
+
+.Bram-Text a:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+/* ======= Top-right nav ======= */
+.top-right-nav-index {
+  font-family: 'Zirkel', sans-serif;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 1500;
+}
+
+.top-right-nav-index a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 8px 16px;
+  font-weight: bold;
+  background-color: transparent;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
+}
+
+.top-right-nav-index a:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* ======= Socials bottom ======= */
+.Socials-Bottom-index {
+  opacity: 1;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: auto;
+  z-index: 1000;
+}
+
+.Socials-icons-index {
+  opacity: 0.5;
+  transition: opacity 0.2s ease, transform 0.2s ease-in;
+}
+.Socials-icons-index:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* ======= Contact / About content blocks ======= */
+.contact-main main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  line-height: 1.6;
+}
+
+.contact-main a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact-main a:hover {
+  color: #ffcc00;
+}
+
+.about-main {
+  max-width: 800px;
+  margin: 2vh 0 auto;
+  padding: 2rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  line-height: 1.7;
+  color: #f0f0f0;
+  background-color: #202020d5;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+.about-main p { margin-bottom: 1.5rem; }
+
+/* ======= Service list ======= */
+.Service-list {
+  font-family: 'Zirkel', sans-serif;
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+  margin: 1vh 0 auto;
+  padding: 2rem;
+}
+
+.Service-list a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 8px 16px;
+  font-weight: bold;
+  background-color: transparent;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
+}
+.Service-list a:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* ======= Portfolio: structure ======= */
+.Port-header,
+.Port-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f4f4f4;
+}
+
+.Port-title { font-size: 2rem; margin: 0; }
+
+.Port-main { 
+  padding-right: 6rem;
+ 
+}
+
+.Port-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px 5px;
+}
+
+/* ======= Portfolio: items & media ======= */
+.Port-item {
+  position: relative;
+ overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  transition: transform 0.3s ease;
+}
+.Port-item:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+.Port-item.vertical {
+  position: relative;
+ overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  transition: transform 0.3s ease;
+}
+.Port-item.vertical:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  overflow: visible;
+}
+.Port-media-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  overflow: visible;
+}
+
+.Port-media-wrapper img,
+.Port-media-wrapper video,
+.Port-item img,
+.Port-item video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  display: block;
+  z-index: 1;
+}
+
+.Port-item:hover img,
+.Port-item:hover video,
+.Port-item:hover .Port-media-wrapper img,
+.Port-item:hover .Port-media-wrapper video {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+/* vertical-specific media */
+.Port-media.vertical {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  transition: transform .4s ease;
+  object-fit: contain;
+}
+.Port-item:hover .Port-media.vertical { transform: scale(1.1); }
+
+/* hover info box that appears outside item */
+
+
+/* ======= Fancybox overrides ======= */
+.fancybox__container { z-index: 9999 !important; }
+.fancybox__content { background-color: #000 !important; }
+.fancybox__toolbar { z-index: 10000 !important; }

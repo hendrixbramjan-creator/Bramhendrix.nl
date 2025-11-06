@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bram Hendrix</title>
+  <link rel="shortcut icon" type="image/x-icon" href="Images/ICON.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background-container">
+  <div class="background" id="bg1"></div>
+  <div class="background" id="bg2"></div>
+  <div class="background" id="bg3"></div>
+  <div class="background" id="bg4"></div>
+  <div class="background" id="bg5"></div>
+</div>
+<div class="top-right-nav-index">
+  <a href="services.html">Services & Portfolio</a>
+  <a href="contact.html">Contact</a>
+</div>
+<div class="Socials-Bottom-index">
+  <a href="https://www.instagram.com/bramhendrix.show.gz" target="_blank"> <img src="Images/Instagram.png" alt="Instagram" class="Socials-icons-index" style="width: 30px; height: 30px; vertical-align:middle;">
+</a>
+</div>
+<header>
+  <h1 class="Bram-Text"><a href="About.html">Bram Hendrix</a></h1>
+</header>
+
+</body>
+</html>
+<script>
+  const backgrounds = document.querySelectorAll('.background');
+  let current = 0;
+
+  function showNextBackground() {
+    backgrounds.forEach((bg, i) => {
+      bg.style.opacity = (i === current) ? '1' : '0';
+    });
+    current = (current + 1) % backgrounds.length;
+  }
+
+  showNextBackground(); // show first
+  setInterval(showNextBackground, 10000); // every 10 seconds
+</script>

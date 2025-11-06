@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"
+/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="shortcut icon" type="image/x-icon" href="Images/ICON.ico">
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body class="Port-page">
+  <header>
+  <h1 class="Bram-Text"><a href="index.html">Bram Hendrix</a></h1>
+   <div class="top-right-nav-index">
+     <a href="services.html">Services</a>
+  <a href="Contact.html">Contact</a>
+</div>
+</header>
+
+  <main class="Port-main">
+    <section class="Port-gallery">
+      <!-- Item 1 -->
+      <div class="Port-item">
+        <a data-fancybox="gallery" href="images/photo1.jpg" data-caption="Floris van oranje 5 Mei festival Wassenaar">
+  <img src="images/photo1.jpg" alt="Photo 1" class="Port-media" />
+</a>
+        
+      </div>
+
+      <!-- Item 2 -->
+      <div class="Port-item vertical">
+        <div class="Port-media-wrapper vertical-wrapper">
+       <a data-fancybox="gallery" href="videos/Vid1.mp4" data-type="html5video" data-caption="5 Mei Festival Wassenaar">
+  <video class="Port-media" muted loop preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+    <source src="Videos/Vid1.mp4" type="video/mp4" />
+  </video>
+</a>
+        </div>
+      </div>
+
+       <!-- Item 3 -->
+      <div class="Port-item">
+       <a data-fancybox="gallery" href="videos/Vid2.mp4" data-type="html5video" data-caption="Congress at Vander Valk DenHaag Wassenaar">
+  <video class="Port-media" muted loop preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+    <source src="Videos/Vid2.mp4" type="video/mp4" />
+  </video>
+</a>
+        
+      </div>
+
+       <!-- Item 4 -->
+    <div class="Port-item vertical">
+  <div class="Port-media-wrapper vertical-wrapper">
+    <a data-fancybox="gallery" href="images/photo3.png" data-caption="3 Point lighting">
+  <img src="images/photo3.png" alt="Photo 1" class="Port-media vertical" />
+</a>
+  </div>  
+</div>
+    <!----Item 5---->
+    <div class="Port-item">
+        <a data-fancybox="gallery" href="images/Photo5.jpeg" data-caption="Wedding with the Bonaparti'S">
+  <img src="images/Photo5.jpeg" alt="Bonaparti's band" class="Port-media" />
+</a>
+        
+      </div>
+          <!----Item 6---->
+    <div class="Port-item">
+        <a data-fancybox="gallery" href="images/Photo6.jpeg" data-caption="">
+  <img src="images/Photo6.jpeg" alt="Bonaparti's band" class="Port-media" />
+</a>
+        
+      </div>
+
+          <!----Item 7---->
+    <div class="Port-item">
+        <a data-fancybox="gallery" href="images/Photo7.jpeg" data-caption="Wedding with the Bonaparti'S">
+  <img src="images/Photo7.jpeg" alt="Bonaparti's band" class="Port-media" />
+</a>
+        
+      </div>
+    </section>
+  </main>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script></body>
+<script>
+  // keyboard moet een boolean zijn, geen object
+  Fancybox.bind("[data-fancybox]", {
+    Toolbar: {
+      display: ["close", "counter", "fullscreen"]
+    },
+    closeButton: "outside",
+    click: "close",
+    dragToClose: true,
+    keyboard: true
+  });
+</script>
+</html>
